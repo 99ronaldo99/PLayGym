@@ -2,7 +2,7 @@
 
 - NodeJs
 - Npm 
-- (Ionic)[http://ionicframework.com]
+- [Ionic](http://ionicframework.com)
 
 ## Installation
 
