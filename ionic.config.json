@@ -1,0 +1,8 @@
+{
+  "name": "play-gym",
+  "app_id": "33c38780",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
