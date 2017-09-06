@@ -32,6 +32,16 @@ page-home {
 
 .img{
 	margin-top:10px;
+	/* margin-top:10px es para poner un especio de encima en */
+}
+
+.img:hover{
+	opacity:.5;
+	cursor:pointer;
+}
+
+.footer{
+	background-color: #2279d3;
 }
 
 
