@@ -1,82 +1,22 @@
 <ion-header >
   <ion-navbar>
+  <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+
+
+    
+
+    </button>
+
+
+
     <ion-title>
-      	<p>
-        
-            <button  md-icon-button [mdMenuTriggerFor]="menuu" >
 
-                <md-icon>filter_list</md-icon>
-              </button>
-              <md-menu #menuu="mdMenu">
-                
-                <button md-menu-item class="icon-big">
-                  <md-icon align="center" whi >account_circle</md-icon>
-                  <!--<span>Configuraciones</span>-->
-                </button>
+    
+    
+    </ion-title>
 
-                <button md-menu-item>
-                  <md-icon>assignment</md-icon>
-                  <span>Registrar</span>
-                </button>
-
-                <button md-menu-item>
-                  <md-icon>fitness_center</md-icon>
-                  <span>Ejercicios</span>
-                </button>
-
-                <button md-menu-item>
-                  <md-icon>directions_run</md-icon>
-                  <span>Rutinas</span>
-                </button>
-
-                  <button md-menu-item>
-                  <md-icon>restaurant</md-icon>
-                  <span>Nutricion</span>
-                </button>
-
-                <button md-menu-item>
-                  <md-icon>check</md-icon>
-                  <span>Recomendaciones</span>
-                </button>
-
-                <button md-menu-item>
-                  <md-icon>shopping_cart</md-icon>
-                  <span>Tienda</span>
-                </button>
-              
-                  <button md-menu-item>
-                  <md-icon>extension</md-icon>
-                  <span>Suplementos</span>
-                </button>
-              
-
-
-                <button md-menu-item>
-                  <md-icon>local_post_office</md-icon>
-                  <span>Contactos</span>
-                </button>
-              
-
-                <button md-menu-item>
-                  <md-icon>place</md-icon>
-                  <span>Sedes</span>
-                </button>
-              
-                  <button md-menu-item>
-                  <md-icon>terrain</md-icon>
-                  <span>Retos</span>
-                </button>
-
-                <button md-menu-item>
-                  <md-icon>live_help</md-icon>
-                  <span>Ayuda</span>
-                </button>
-
-              </md-menu>
-
-        Play Gym
-            
-            <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
+    <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
                 <md-icon>more_horiz</md-icon>
               </button>
               <md-menu #menu="mdMenu">
@@ -100,8 +40,7 @@
                   <span>Cerrar cuenta</span>
                 </button>
               </md-menu>
-        </p>
-    </ion-title>
+        
   </ion-navbar>
 </ion-header>
 
