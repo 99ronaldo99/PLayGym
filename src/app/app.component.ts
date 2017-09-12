@@ -7,6 +7,14 @@ import { HomePage } from '../pages/home/home';
 import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
 import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
 import { RutinasPage } from '../pages/rutinas/rutinas';
+import { AyudaPage } from '../pages/ayuda/ayuda';
+import { ContactosPage } from '../pages/contactos/contactos';
+import { NutricionPage } from '../pages/nutricion/nutricion';
+import { RegistrarsePage } from '../pages/registrarse/registrarse';
+import { RetosPage } from '../pages/retos/retos';
+import { SedesPage } from '../pages/sedes/sedes';
+import { SuplementosPage } from '../pages/suplementos/suplementos';
+import { TiendaPage } from '../pages/tienda/tienda';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +34,15 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Recomendaciones', component: RecomendacionesPage  },
       { title: 'Ejercicios', component: EjerciciosPage  },
-      { title: 'Rutinas', component: RutinasPage }
+      { title: 'Rutinas', component: RutinasPage },
+      { title: 'Ayuda', component: AyudaPage },
+      { title: 'Contactos', component: ContactosPage },
+      { title: 'Nutricion', component: NutricionPage },
+      { title: 'Registrarse', component: RegistrarsePage },
+      { title: 'Retos', component: RetosPage },
+      { title: 'Sedes', component: SedesPage },
+      { title: 'Suplementos', component: SuplementosPage },
+      { title: 'Tienda', component: TiendaPage }
     ];
 
   }
