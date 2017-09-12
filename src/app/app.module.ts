@@ -8,6 +8,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
+import { RutinasPage } from '../pages/rutinas/rutinas';
+import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
+
 
 
 import 'hammerjs';
@@ -15,7 +19,10 @@ import 'hammerjs';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    RecomendacionesPage,
+    RutinasPage,
+    EjerciciosPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,10 @@ import 'hammerjs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    RecomendacionesPage,
+    RutinasPage,
+    EjerciciosPage
   ],
   providers: [
     StatusBar,
