@@ -19,6 +19,7 @@ import { RetosPage } from '../pages/retos/retos';
 import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 
 
 
@@ -38,7 +39,8 @@ import 'hammerjs';
     RetosPage,
     SedesPage,
     SuplementosPage,
-    TiendaPage
+    TiendaPage,
+    ConfiguracionPage
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ import 'hammerjs';
     SedesPage,
     SuplementosPage,
     TiendaPage,
+    ConfiguracionPage
   ],
   providers: [
     StatusBar,

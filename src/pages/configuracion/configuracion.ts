@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
-import { ConfiguracionPage } from '../configuracion/configuracion';
+
+
+
+
 /**
- * Generated class for the RegistrarsePage page.
+ * Generated class for the ConfiguracionPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -12,16 +15,16 @@ import { ConfiguracionPage } from '../configuracion/configuracion';
 
 @IonicPage()
 @Component({
-  selector: 'page-registrarse',
-  templateUrl: 'registrarse.html',
+  selector: 'page-configuracion',
+  templateUrl: 'configuracion.html',
 })
-export class RegistrarsePage {
+export class ConfiguracionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public platform: Platform,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistrarsePage');
+    console.log('ionViewDidLoad ConfiguracionPage');
   }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
@@ -68,8 +71,5 @@ export class RegistrarsePage {
       ]
     });
     actionSheet.present();
-  }
-  openSettings(){
-    this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
 }

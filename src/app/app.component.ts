@@ -16,6 +16,8 @@ import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -42,9 +44,9 @@ export class MyApp {
       { title: 'Retos', component: RetosPage },
       { title: 'Sedes', component: SedesPage },
       { title: 'Suplementos', component: SuplementosPage },
-      { title: 'Tienda', component: TiendaPage }
+      { title: 'Tienda', component: TiendaPage },
+      
     ];
-
   }
 
   initializeApp() {

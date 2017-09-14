@@ -3,6 +3,9 @@ import { NavController } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 
+import { ConfiguracionPage } from '../configuracion/configuracion';
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -63,6 +66,10 @@ openMenu() {
       ]
     });
     actionSheet.present();
+  }
+
+  openSettings(){
+    this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
 
 }
