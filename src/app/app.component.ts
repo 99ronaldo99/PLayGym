@@ -26,26 +26,24 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Recomendaciones', component: RecomendacionesPage  },
-      { title: 'Ejercicios', component: EjerciciosPage  },
-      { title: 'Rutinas', component: RutinasPage },
-      { title: 'Ayuda', component: AyudaPage },
-      { title: 'Contactos', component: ContactosPage },
-      { title: 'Nutricion', component: NutricionPage },
-      { title: 'Registrarse', component: RegistrarsePage },
-      { title: 'Retos', component: RetosPage },
-      { title: 'Sedes', component: SedesPage },
-      { title: 'Suplementos', component: SuplementosPage },
-      { title: 'Tienda', component: TiendaPage },
-      
+      { title: 'Registrarse', component: RegistrarsePage , icon: "person" },
+      { title: 'Ejercicios', component: EjerciciosPage , icon: "bicycle"  },
+      { title: 'Rutinas', component: RutinasPage , icon: "calendar" },
+      { title: 'Retos', component: RetosPage , icon: "trophy" },
+      { title: 'Recomendaciones', component: RecomendacionesPage, icon: "clipboard"},//icon para agregar el icono
+      { title: 'Nutricion', component: NutricionPage , icon: "restaurant" },
+      { title: 'Sedes', component: SedesPage , icon: "pin" },
+      { title: 'Tienda', component: TiendaPage , icon: "cart" },
+      { title: 'Suplementos', component: SuplementosPage , icon: "flag" },
+      { title: 'Contactos', component: ContactosPage , icon: "contacts" },
+      { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
     ];
   }
 
