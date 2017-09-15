@@ -17,10 +17,6 @@
         </button>
                 
         <button md-menu-item>
-            <md-slide-toggle>Notificaciones</md-slide-toggle>
-        </button>
-
-        <button md-menu-item>
             <md-icon>&#xE80D;</md-icon>
             <span>Compartir</span>
         </button>
@@ -29,7 +25,9 @@
             <md-icon>&#xE8AC;</md-icon>
             <span>Cerrar cuenta</span>
         </button>
+
     </md-menu>  
+
     </ion-title>   
   </ion-navbar>
 </ion-header>
@@ -70,6 +68,10 @@
 
 <ion-footer > 
 <ion-navbar >
+
+<button ion-button icon-left (click)="openHome()" >
+  <ion-icon name="home"></ion-icon>
+</button>
 
  <button  class="action-sheets-basic-page" ion-button style="float: right;" (click)="openMenu()">
   <ion-icon ios="ios-paper-plane" md="md-paper-plane"></ion-icon>

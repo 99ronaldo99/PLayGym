@@ -71,6 +71,9 @@ openMenu() {
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
+  openHome(){
+    this.navCtrl.setRoot(HomePage)
+  }
 
 }
 

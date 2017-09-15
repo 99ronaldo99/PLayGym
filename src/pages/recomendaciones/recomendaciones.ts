@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the RecomendacionesPage page.
  *
@@ -71,5 +72,8 @@ export class RecomendacionesPage {
   }
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
+  }
+  openHome(){
+    this.navCtrl.setRoot(HomePage)
   }
 }
