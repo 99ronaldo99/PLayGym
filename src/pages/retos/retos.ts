@@ -11,7 +11,9 @@ import { HomePage } from '../home/home';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'retos'
+  })
 @Component({
   selector: 'page-retos',
   templateUrl: 'retos.html',

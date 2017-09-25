@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MaterialModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -20,10 +20,22 @@ import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
-
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { TabsPage } from '../pages/tabs/tabs';
 
 
 import 'hammerjs';
+import { AutenticacionProvider } from '../providers/autenticacion/autenticacion';
+
+ /* const config = {
+    apiKey: "AIzaSyCvAy4q1JJI-EN5LHzoxKq7xk5L8ZhTmJ0",
+    authDomain: "play-gym.firebaseapp.com",
+    databaseURL: "https://play-gym.firebaseio.com",
+    projectId: "play-gym",
+    storageBucket: "play-gym.appspot.com",
+    messagingSenderId: "202295775180"
+  };*/
 
 @NgModule({
   declarations: [
@@ -40,13 +52,17 @@ import 'hammerjs';
     SedesPage,
     SuplementosPage,
     TiendaPage,
-    ConfiguracionPage
+    ConfiguracionPage,
+    AboutPage,
+    ContactPage,
+    TabsPage
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     MaterialModule,
-    [BrowserAnimationsModule]
+    [BrowserAnimationsModule],
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,12 +79,16 @@ import 'hammerjs';
     SedesPage,
     SuplementosPage,
     TiendaPage,
-    ConfiguracionPage
+    ConfiguracionPage,
+    TabsPage,
+    AboutPage,
+    ContactPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AutenticacionProvider
   ]
 })
 export class AppModule {}

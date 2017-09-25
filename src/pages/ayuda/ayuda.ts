@@ -11,7 +11,10 @@ import { HomePage } from '../home/home';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'ayuda'
+  })
+
 @Component({
   selector: 'page-ayuda',
   templateUrl: 'ayuda.html',

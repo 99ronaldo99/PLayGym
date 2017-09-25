@@ -3,6 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// estos import son para las paginas de la applicacion 
+// importar + nombre pagina + de + direcccion del archivo
 import { HomePage } from '../pages/home/home';
 import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
 import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
@@ -18,13 +20,13 @@ import { TiendaPage } from '../pages/tienda/tienda';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = HomePage;
+  rootPage: any= HomePage;
 
   pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
 
@@ -46,7 +48,6 @@ export class MyApp {
       { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
     ];
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -54,6 +55,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
   }
 
   openPage(page) {
@@ -61,4 +63,6 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+
 }

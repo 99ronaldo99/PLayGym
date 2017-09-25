@@ -4,6 +4,8 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 
 import { ConfiguracionPage } from '../configuracion/configuracion';
+/*import { LoginPage } from '../login/login';*/
+
 
 
 @Component({
@@ -18,7 +20,12 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public platform: Platform,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) 
   {
-    menu.enable(true);
+   /* menu.enable(true);
+    window.localStorage.removeItem('corruentuser');
+    if (!this.isLoggedin()){
+      console.log('you are not logged in');
+      this.navCtrl.push(LoginPage)
+    }*/
   }
 
 openMenu() {
@@ -74,7 +81,62 @@ openMenu() {
   openHome(){
     this.navCtrl.setRoot(HomePage)
   }
+  /*isLoggedin(){
+    if (window.localStorage.getItem('currentuser')){
+      return true;
+    }*/
+  
+  }
+
+
+
+/*import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthProviders, AuthMethods, AngularFire } from 'angularfire';
+
+
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+
+/*@IonicPage()
+@Component({
+  selector: 'page-login',
+  templateUrl: 'login.html',
+})
+export class LoginPage {
+  email:any;
+  password:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire) {}
+
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad LoginPage');
+  }
+  login(){
+    this.angfire.auth.login({
+      email:this.email,
+      password:this.password
+    },
+    {
+      Provider: AuthProviders.password,
+      method:AuthMethods.password
+    }).then((response)=>{
+      console.log('login success' + JSON.stringify(response));
+      let currentuser = {
+        email: response.auth.email,
+        picture :response.auth.photoURL 
+      };
+      window.localStorage.setItem('currentuser', JSON.stringify('currentuser')); 
+      this.navCtrl.pop();
+    }).catch((error)=> {
+      console.log (error);
+    }) 
+  } 
 
 }
-
-
+*/

@@ -13,7 +13,9 @@ import { App, MenuController } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'configuracion'
+  })
 @Component({
   selector: 'page-configuracion',
   templateUrl: 'configuracion.html',

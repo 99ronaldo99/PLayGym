@@ -11,7 +11,9 @@ import { HomePage } from '../home/home';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'recomendaciones'
+  })
 @Component({
   selector: 'page-recomendaciones',
   templateUrl: 'recomendaciones.html',

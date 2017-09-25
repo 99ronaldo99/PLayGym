@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
-import { HomePage } from '../home/home';
+import { TabsPage } from '../tabs/tabs';
 /**
  * Generated class for the EjerciciosPage page.
  *
@@ -11,7 +11,9 @@ import { HomePage } from '../home/home';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'ejercicios'
+  })
 @Component({
   selector: 'page-ejercicios',
   templateUrl: 'ejercicios.html',
@@ -73,7 +75,7 @@ export class EjerciciosPage {
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
-  openHome(){
-    this.navCtrl.setRoot(HomePage)
+  openTabs(){
+    this.navCtrl.setRoot(TabsPage)
   }
 }
