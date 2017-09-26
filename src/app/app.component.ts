@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // estos import son para las paginas de la applicacion 
 // importar + nombre pagina + de + direcccion del archivo
-import { HomePage } from '../pages/home/home';
+
 import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
 import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
 import { RutinasPage } from '../pages/rutinas/rutinas';
@@ -17,6 +17,8 @@ import { RetosPage } from '../pages/retos/retos';
 import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
+import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -25,8 +27,9 @@ import { TiendaPage } from '../pages/tienda/tienda';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
-  rootPage: any= HomePage;
+  @ViewChild(Nav) nav: Nav; 
+
+  rootPage: any= this.isLogged() ? TabsPage : LoginPage 
 
   pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
 
@@ -56,6 +59,8 @@ export class MyApp {
       this.splashScreen.hide();
     });
 
+    
+
   }
 
   openPage(page) {
@@ -64,5 +69,14 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
+  isLogged(){
+    let hasUser = window.localStorage.getItem('user')
+    if( hasUser 
+     && hasUser !== 'null' 
+     && hasUser !== 'undefined' ){
+      return true;
+    }
+    return false;
+  }
 
 }

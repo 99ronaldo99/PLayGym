@@ -23,19 +23,26 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
 
+import { AutenticacionProvider } from '../providers/autenticacion/autenticacion';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import 'hammerjs';
-import { AutenticacionProvider } from '../providers/autenticacion/autenticacion';
 
- /* const config = {
-    apiKey: "AIzaSyCvAy4q1JJI-EN5LHzoxKq7xk5L8ZhTmJ0",
-    authDomain: "play-gym.firebaseapp.com",
-    databaseURL: "https://play-gym.firebaseio.com",
-    projectId: "play-gym",
-    storageBucket: "play-gym.appspot.com",
-    messagingSenderId: "202295775180"
-  };*/
+// Initialize Firebase
+const config = {
+    apiKey: "AIzaSyBbxW3HisQRxrvivv87cZVYun0vehnPKEk",
+    authDomain: "playgym-91674.firebaseapp.com",
+    databaseURL: "https://playgym-91674.firebaseio.com",
+    projectId: "playgym-91674",
+    storageBucket: "playgym-91674.appspot.com",
+    messagingSenderId: "593375746685"
+}; 
 
 @NgModule({
   declarations: [
@@ -55,13 +62,15 @@ import { AutenticacionProvider } from '../providers/autenticacion/autenticacion'
     ConfiguracionPage,
     AboutPage,
     ContactPage,
-    TabsPage
+    TabsPage,
+    LoginPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     MaterialModule,
+    AngularFireModule.initializeApp(config),
     [BrowserAnimationsModule],
   ],
   bootstrap: [IonicApp],
@@ -82,13 +91,17 @@ import { AutenticacionProvider } from '../providers/autenticacion/autenticacion'
     ConfiguracionPage,
     TabsPage,
     AboutPage,
-    ContactPage
+    ContactPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AutenticacionProvider
+    AutenticacionProvider,
+    AngularFireDatabase,
+    AngularFireAuth,
+    InAppBrowser
   ]
 })
 export class AppModule {}

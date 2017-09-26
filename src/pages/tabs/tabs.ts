@@ -16,6 +16,8 @@ export class TabsPage {
   tab3Root = ContactPage;
   tab4Root = TiendaPage;
 
+  isLogged = false
+
   constructor() {
 
   }

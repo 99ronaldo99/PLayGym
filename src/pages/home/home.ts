@@ -4,7 +4,11 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 
 import { ConfiguracionPage } from '../configuracion/configuracion';
-/*import { LoginPage } from '../login/login';*/
+
+
+
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 
 
@@ -18,7 +22,8 @@ import { ConfiguracionPage } from '../configuracion/configuracion';
   }*/ 
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public platform: Platform,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) 
+  constructor(public navCtrl: NavController, public platform: Platform, public afAuth: AngularFireAuth
+    ,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) 
   {
    /* menu.enable(true);
     window.localStorage.removeItem('corruentuser');
@@ -78,6 +83,15 @@ openMenu() {
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
+
+  doLogout(){
+    this.afAuth.auth.signOut().then(res=>{
+      window.localStorage.setItem('user', 'null' )
+      location.href=location.href
+    }); 
+  }
+
+
   openHome(){
     this.navCtrl.setRoot(HomePage)
   }

@@ -1,34 +1,34 @@
 <ion-header >
   <ion-navbar>
     <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
+          <ion-icon name='menu'></ion-icon>
         </button>
-         <ion-title class="titulo" >
-         Play Gym
-
-        <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
-            <md-icon></md-icon>
+        <ion-title class="titulo" > Play Gym
+      <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
+        
+        <md-icon>more_vert</md-icon>
         </button>
-    <md-menu #menu="mdMenu">
+      <md-menu #menu="mdMenu">
                 
-        <button md-menu-item (click)="openSettings()" >
-            <md-icon>&#xE8B9;</md-icon>
-            <span>Configuraciones</span>
-        </button>
-                
-        <button md-menu-item>
-            <md-icon>&#xE80D;</md-icon>
-            <span>Compartir</span>
-        </button>
+          <button md-menu-item (click)="openSettings()" >
+              <md-icon>&#xE8B9;</md-icon>
+              <span>Configuraciones</span>
+          </button>
+               
+          <button md-menu-item>
+              <md-icon>&#xE80D;</md-icon>
+              <span>Compartir</span>
+          </button>
+ 
+    
+          
 
-        <button md-menu-item>
-            <md-icon>&#xE8AC;</md-icon>
-            <span>Cerrar cuenta</span>
-        </button>
-
-    </md-menu>  
-
-    </ion-title>   
+          <button md-menu-item (click)="doLogout()">
+              <md-icon>&#xE8AC;</md-icon>
+              <span>Cerrar cuenta</span>
+          </button>
+      </md-menu> 
+      </ion-title>   
   </ion-navbar>
 </ion-header>
 

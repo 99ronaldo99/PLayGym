@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
-import { HomePage } from '../home/home';
+import { TabsPage } from '../tabs/tabs';
 /**
  * Generated class for the RegistrarsePage page.
  *
@@ -75,7 +75,7 @@ export class RegistrarsePage {
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
-  openHome(){
-    this.navCtrl.setRoot(HomePage)
+  openTabs(){
+    this.navCtrl.setRoot(TabsPage)
   }
 }
