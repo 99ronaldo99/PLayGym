@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { NutricionPage } from '../nutricion/nutricion';
+/*import { ContactosPage } from '../contactos/contactos';*/
 import { HomePage } from '../home/home';
 import { TiendaPage } from '../tienda/tienda';
 
@@ -12,9 +12,9 @@ import { TiendaPage } from '../tienda/tienda';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-  tab4Root = TiendaPage;
+  tab2Root = NutricionPage;
+  /*tab3Root = ContactosPage;
+*/  tab4Root = TiendaPage;
 
   isLogged = false
 

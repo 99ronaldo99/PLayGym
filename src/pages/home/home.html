@@ -1,70 +1,69 @@
 <ion-header >
   <ion-navbar>
-    <button ion-button menuToggle icon-only>
+          <button ion-button menuToggle icon-only>
           <ion-icon name='menu'></ion-icon>
         </button>
-        <ion-title class="titulo" > Play Gym
+        <ion-title  class="titulo"  > Play Gym 
       <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
         
-        <md-icon>more_vert</md-icon>
+         <ion-icon name="more"></ion-icon>
         </button>
-      <md-menu #menu="mdMenu">
+      <md-menu #menu="mdMenu"  >
                 
           <button md-menu-item (click)="openSettings()" >
               <md-icon>&#xE8B9;</md-icon>
               <span>Configuraciones</span>
           </button>
-               
-          <button md-menu-item>
+                  
+          <!-- <button md-menu-item>
+              <md-slide-toggle>Notificaciones</md-slide-toggle>
+          </button> -->
+
+          <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
               <md-icon>&#xE80D;</md-icon>
               <span>Compartir</span>
           </button>
- 
-    
-          
 
-          <button md-menu-item (click)="doLogout()">
+          <button md-menu-item>
               <md-icon>&#xE8AC;</md-icon>
               <span>Cerrar cuenta</span>
           </button>
-      </md-menu> 
-      </ion-title>   
+      </md-menu>  
+      </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="card-background-page" >
 
 <div class="row featurette">
+        <h1>Home</h1>
         <div class="col-md-6 img">
-          <img class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN">
+          <img (click)="openEjerciciosPage()" class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN">
           <div class="card-title">Ejercicios</div> 
           <div class="card-subtitle">41 Listings</div>
          </div>
 
-        <div class="col-md-6 img" >
+        <div (click)="openRutinasPage()" class="col-md-6 img" >
           <img class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN" alt="Generic placeholder image">
             <div class="card-title">Rutinas</div> 
           <div class="card-subtitle">41 Listings</div>
         
         </div>
 
-        <div class="col-md-6 img">
+        <div (click)="openRetosPage()" class="col-md-6 img">
           <img class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN"> 
             <div class="card-title">Retos</div> 
           <div class="card-subtitle">41 Listings</div>
         
          </div>
 
-        <div class="col-md-6 img">
+        <div (click)="openRecomendacionesPage()" class="col-md-6 img">
           <img class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN" alt="Generic placeholder image">
             <div class="card-title">Recomedaciones</div> 
           <div class="card-subtitle">41 Listings</div>
         
-        </div>
-          
+        </div>     
 </div>
-
-
 </ion-content>
 
 

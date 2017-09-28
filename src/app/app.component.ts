@@ -10,17 +10,15 @@ import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
 import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
 import { RutinasPage } from '../pages/rutinas/rutinas';
 import { AyudaPage } from '../pages/ayuda/ayuda';
-import { ContactosPage } from '../pages/contactos/contactos';
-import { NutricionPage } from '../pages/nutricion/nutricion';
-import { RegistrarsePage } from '../pages/registrarse/registrarse';
+import { RegistrarPage } from '../pages/registrar/registrar';
 import { RetosPage } from '../pages/retos/retos';
 import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
-
-
+import { HomePage } from '../pages/home/home';
+import { LogearPage } from '../pages/logear/logear';
 
 
 @Component({
@@ -29,7 +27,8 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav; 
 
-  rootPage: any= this.isLogged() ? TabsPage : LoginPage 
+  rootPage: any= LoginPage 
+/*  rootPage: any= this.isLogged() ? TabsPage : LoginPage  /*rootPage: any= TabsPage */
 
   pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
 
@@ -38,17 +37,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Registrarse', component: RegistrarsePage , icon: "person" },
-      { title: 'Ejercicios', component: EjerciciosPage , icon: "bicycle"  },
-      { title: 'Rutinas', component: RutinasPage , icon: "calendar" },
-      { title: 'Retos', component: RetosPage , icon: "trophy" },
-      { title: 'Recomendaciones', component: RecomendacionesPage, icon: "clipboard"},//icon para agregar el icono
-      { title: 'Nutricion', component: NutricionPage , icon: "restaurant" },
       { title: 'Sedes', component: SedesPage , icon: "pin" },
       { title: 'Tienda', component: TiendaPage , icon: "cart" },
       { title: 'Suplementos', component: SuplementosPage , icon: "flag" },
-      { title: 'Contactos', component: ContactosPage , icon: "contacts" },
       { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
+      { title: 'Registrar', component: RegistrarPage, icon: "help-circle"  },
+      { title: 'Logear', component: LogearPage, icon: "help-circle"  },
+
     ];
   }
   initializeApp() {

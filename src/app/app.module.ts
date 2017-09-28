@@ -4,7 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MaterialModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { HttpModule, Http } from '@angular/http'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -12,37 +13,29 @@ import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
 import { RutinasPage } from '../pages/rutinas/rutinas';
 import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
 import { AyudaPage } from '../pages/ayuda/ayuda';
-import { ContactosPage } from '../pages/contactos/contactos';
 import { NutricionPage } from '../pages/nutricion/nutricion';
-import { RegistrarsePage } from '../pages/registrarse/registrarse';
+import { RegistrarPage } from '../pages/registrar/registrar';
 import { RetosPage } from '../pages/retos/retos';
 import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
-
-import { AutenticacionProvider } from '../providers/autenticacion/autenticacion';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { LogearPage } from '../pages/logear/logear';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { Facebook } from '@ionic-native/facebook';
+import { FacebookWeb } from '../libs/facebook/facebook';
+
+import { ApiService } from '../service/api/api';
+import { DialogAlert } from '../dialogs/alert/alert';
+import { Utils } from '../libs/utils/utils';
+
 import 'hammerjs';
 
-// Initialize Firebase
-const config = {
-    apiKey: "AIzaSyBbxW3HisQRxrvivv87cZVYun0vehnPKEk",
-    authDomain: "playgym-91674.firebaseapp.com",
-    databaseURL: "https://playgym-91674.firebaseio.com",
-    projectId: "playgym-91674",
-    storageBucket: "playgym-91674.appspot.com",
-    messagingSenderId: "593375746685"
-}; 
 
 @NgModule({
   declarations: [
@@ -52,25 +45,24 @@ const config = {
     RutinasPage,
     EjerciciosPage,
     AyudaPage,
-    ContactosPage,
     NutricionPage,
-    RegistrarsePage,
+    RegistrarPage,
     RetosPage,
     SedesPage,
     SuplementosPage,
     TiendaPage,
     ConfiguracionPage,
     AboutPage,
-    ContactPage,
     TabsPage,
-    LoginPage
-
+    LoginPage,
+    LogearPage,
+    DialogAlert
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
-    MaterialModule,
-    AngularFireModule.initializeApp(config),
+    MaterialModule,  
     [BrowserAnimationsModule],
   ],
   bootstrap: [IonicApp],
@@ -81,9 +73,8 @@ const config = {
     RutinasPage,
     EjerciciosPage,
     AyudaPage,
-    ContactosPage,
     NutricionPage,
-    RegistrarsePage,
+    RegistrarPage,
     RetosPage,
     SedesPage,
     SuplementosPage,
@@ -91,17 +82,20 @@ const config = {
     ConfiguracionPage,
     TabsPage,
     AboutPage,
-    ContactPage,
-    LoginPage
+    LoginPage,
+    LogearPage,
+    DialogAlert
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AutenticacionProvider,
-    AngularFireDatabase,
-    AngularFireAuth,
-    InAppBrowser
+    {provide: ErrorHandler, useClass: IonicErrorHandler},  
+    InAppBrowser,
+    Facebook,
+    FacebookWeb,
+    ApiService,
+    Utils,
+    DialogAlert
   ]
 })
 export class AppModule {}

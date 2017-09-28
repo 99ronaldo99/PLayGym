@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>registrase</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Nombre y Apellido </ion-label>
+      <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+
+   <!--  <ion-item>
+     <ion-label stacked>Crear Usuario</ion-label>
+     <ion-input type="text"></ion-input>
+   </ion-item> -->
+
+    <ion-item>
+      <ion-label stacked>Correo Electronico</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+	<ion-item>
+      <ion-label stacked>Crear Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>
+    </ion-item>
+
+	<ion-item>
+      <ion-label stacked>verificar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.cpasswd"></ion-input>
+    </ion-item>
+
+<!-- 
+    <ion-item>
+      <ion-label stacked>Genero</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Peso</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Edad</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Actividad fisica (si/no)</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item> -->
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="tryRegister()">registarse </button>
+  </div>
+
+</ion-content>

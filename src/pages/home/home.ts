@@ -4,13 +4,15 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 
 import { ConfiguracionPage } from '../configuracion/configuracion';
+import { EjerciciosPage } from '../ejercicios/ejercicios';
+import { RutinasPage } from '../rutinas/rutinas';
+import { RetosPage } from '../retos/retos';
+import { RecomendacionesPage } from '../recomendaciones/recomendaciones';
+
+import { AngularFireAuth } from 'angularfire2/auth'; 
 
 
-
-import { AngularFireAuth } from 'angularfire2/auth';
-
-
-
+declare let cordova:any;
 
 @Component({
   selector: 'page-home',
@@ -44,6 +46,11 @@ openMenu() {
           icon: !this.platform.is('ios') ? 'logo-youtube' : null,
           handler: () => {
             console.log('Delete clicked');
+            if (this.platform.is('cordova')){
+              cordova.InAppBrowser.open("https://www.youtube.com/","_blank")
+            }else{
+              window.open("https://www.youtube.com/","_blank")
+            }
           }
         },
         {
@@ -51,6 +58,11 @@ openMenu() {
           icon: !this.platform.is('ios') ? 'logo-facebook' : null,
           handler: () => {
             console.log('Share clicked');
+            if (this.platform.is('cordova')){
+              cordova.iab.open("https://www.facebook.com/","_blank")
+            }else{
+              window.open("https://www.facebook.com/","_blank")
+            }
           }
         },
         {
@@ -58,6 +70,11 @@ openMenu() {
           icon: !this.platform.is('ios') ? 'logo-twitter' : null,
           handler: () => {
             console.log('Play clicked');
+            if (this.platform.is('cordova')){
+              cordova.iab.open("https://twitter.com/?lang=en/","_blank")
+            }else{
+              window.open("https://twitter.com/?lang=en","_blank")
+            }
           }
         },
         {
@@ -90,67 +107,23 @@ openMenu() {
       location.href=location.href
     }); 
   }
-
-
   openHome(){
     this.navCtrl.setRoot(HomePage)
   }
-  /*isLoggedin(){
-    if (window.localStorage.getItem('currentuser')){
-      return true;
-    }*/
-  
+  openEjerciciosPage(){
+    this.navCtrl.setRoot(EjerciciosPage)
+  }
+  openRutinasPage(){
+    this.navCtrl.setRoot(RutinasPage) 
+  }
+  openRetosPage(){
+    this.navCtrl.setRoot(RetosPage) 
+  }
+  openRecomendacionesPage(){
+    this.navCtrl.setRoot(RecomendacionesPage)
+  }
   }
 
 
 
-/*import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthProviders, AuthMethods, AngularFire } from 'angularfire';
 
-
-/**
- * Generated class for the LoginPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
-/*@IonicPage()
-@Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
-})
-export class LoginPage {
-  email:any;
-  password:any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public angfire: AngularFire) {}
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-  login(){
-    this.angfire.auth.login({
-      email:this.email,
-      password:this.password
-    },
-    {
-      Provider: AuthProviders.password,
-      method:AuthMethods.password
-    }).then((response)=>{
-      console.log('login success' + JSON.stringify(response));
-      let currentuser = {
-        email: response.auth.email,
-        picture :response.auth.photoURL 
-      };
-      window.localStorage.setItem('currentuser', JSON.stringify('currentuser')); 
-      this.navCtrl.pop();
-    }).catch((error)=> {
-      console.log (error);
-    }) 
-  } 
-
-}
-*/
