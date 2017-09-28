@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams , Platform} from 'ionic-angular'; 
-
+import { IonicPage  } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { FacebookWeb } from '../../libs/facebook/facebook';
 import { LogearPage } from '../logear/logear';
 import { RegistrarPage } from '../registrar/registrar';
  
 
+@IonicPage({
+  name: 'Login'
+  })
 @Component({
   selector: 'page-login',
   templateUrl:'login.html',

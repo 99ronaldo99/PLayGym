@@ -24,7 +24,7 @@
               <span>Compartir</span>
           </button>
 
-          <button md-menu-item>
+          <button md-menu-item (click)="doLogout()">
               <md-icon>&#xE8AC;</md-icon>
               <span>Cerrar cuenta</span>
           </button>
@@ -36,7 +36,6 @@
 <ion-content padding class="card-background-page" >
 
 <div class="row featurette">
-        <h1>Home</h1>
         <div class="col-md-6 img">
           <img (click)="openEjerciciosPage()" class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN">
           <div class="card-title">Ejercicios</div> 

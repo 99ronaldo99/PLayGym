@@ -39,16 +39,17 @@ export class LogearPage {
   		if( !this.utils.isEmail(this.user.email) ){
   			this.utils.alert('Type a valid email adrress');
   		}else{
+        this.utils.showLoad()
 	  		this.service.loginUser(this.user)
 			.subscribe( res => {
 				console.log(res);
-
+        this.utils.hideLoad()
 				window.localStorage.setItem('user','logged')
 				location.href=location.href
 				// finalize login with storage
 
 
-			}, err => { console.log(err); this.utils.alert('I cant login, verify your credential and try again');  })
+			}, err => { console.log(err); this.utils.hideLoad(); this.utils.alert('I cant login, verify your credential and try again');  })
   		}
   	}
   }

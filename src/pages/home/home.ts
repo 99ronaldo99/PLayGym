@@ -9,7 +9,6 @@ import { RutinasPage } from '../rutinas/rutinas';
 import { RetosPage } from '../retos/retos';
 import { RecomendacionesPage } from '../recomendaciones/recomendaciones';
 
-import { AngularFireAuth } from 'angularfire2/auth'; 
 
 
 declare let cordova:any;
@@ -24,7 +23,7 @@ declare let cordova:any;
   }*/ 
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public platform: Platform, public afAuth: AngularFireAuth
+  constructor(public navCtrl: NavController, public platform: Platform
     ,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) 
   {
    /* menu.enable(true);
@@ -101,12 +100,11 @@ openMenu() {
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
 
-  doLogout(){
-    this.afAuth.auth.signOut().then(res=>{
-      window.localStorage.setItem('user', 'null' )
-      location.href=location.href
-    }); 
+  doLogout(){ 
+    window.localStorage.setItem('user', 'null' )
+    location.href=location.href 
   }
+  
   openHome(){
     this.navCtrl.setRoot(HomePage)
   }
@@ -122,7 +120,7 @@ openMenu() {
   openRecomendacionesPage(){
     this.navCtrl.setRoot(RecomendacionesPage)
   }
-  }
+}
 
 
 

@@ -12,7 +12,10 @@ import { Utils } from '../../libs/utils/utils';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
+
+@IonicPage({
+  name: 'Login'
+  })
 @Component({
   selector: 'page-registrar',
   templateUrl: 'registrar.html',
@@ -48,13 +51,16 @@ export class RegistrarPage {
   			if( this.user.passwd != this.user.cpasswd ){
 	  			this.utils.alert('Password and confiration not match');
 	  		}else{
+          this.utils.showLoad()
 		  		this.service.createUser( this.user.name, this.user.email , this.user.passwd)
 				.subscribe( res => {
 					console.log(res)
+          this.utils.hideLoad()
 					this.utils.alert('User created successfully')
 					this.navCtrl.pop(); 
 				}, err => { 
-					console.log(err); 
+					console.log(err);
+          this.utils.hideLoad() 
 					err = JSON.parse(err._body)
 					if( err && err.errors.length > 0 ){
 						this.utils.alert( err.errors[0].detail )

@@ -6,18 +6,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // estos import son para las paginas de la applicacion 
 // importar + nombre pagina + de + direcccion del archivo
 
-import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
-import { EjerciciosPage } from '../pages/ejercicios/ejercicios';
-import { RutinasPage } from '../pages/rutinas/rutinas';
 import { AyudaPage } from '../pages/ayuda/ayuda';
 import { RegistrarPage } from '../pages/registrar/registrar';
-import { RetosPage } from '../pages/retos/retos';
 import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
-import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
-import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
 import { LogearPage } from '../pages/logear/logear';
 
 
@@ -27,8 +22,10 @@ import { LogearPage } from '../pages/logear/logear';
 export class MyApp {
   @ViewChild(Nav) nav: Nav; 
 
-  rootPage: any= LoginPage 
-/*  rootPage: any= this.isLogged() ? TabsPage : LoginPage  /*rootPage: any= TabsPage */
+  // rootPage: any= LoginPage 
+  rootPage: any= this.isLogged() ? TabsPage : LoginPage  
+
+  /*rootPage: any= TabsPage */
 
   pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
 
