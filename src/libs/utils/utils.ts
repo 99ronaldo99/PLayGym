@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core'
-import { environment } from '../../environments/environment'
 import { MdDialog } from '@angular/material'
 import { DialogAlert } from '../../dialogs/alert/alert'
-
-
-
 
 declare let $:any; 
 

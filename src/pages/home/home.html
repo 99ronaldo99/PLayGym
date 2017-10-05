@@ -1,9 +1,16 @@
 <ion-header >
   <ion-navbar>
+          <!-- boton menu  -->
           <button ion-button menuToggle icon-only>
-          <ion-icon name='menu'></ion-icon>
-        </button>
-        <ion-title  class="titulo"  > Play Gym 
+              <ion-icon name='menu'></ion-icon>
+          </button>
+          <!-- fin boton -->
+
+          <!-- titulo principal  -->
+          <ion-title  class="titulo"  > Play Gym
+          <!-- fin titulo -->
+
+          <!-- boton cabeza lado derecho -->
       <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
         
          <ion-icon name="more"></ion-icon>
@@ -14,14 +21,15 @@
               <md-icon>&#xE8B9;</md-icon>
               <span>Configuraciones</span>
           </button>
-                  
-          <!-- <button md-menu-item>
-              <md-slide-toggle>Notificaciones</md-slide-toggle>
-          </button> -->
+
+          <button md-menu-item (click)="doAlert()" >
+              <md-icon>contacts</md-icon>
+              <span>Contactos</span>
+          </button>
 
           <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
               <md-icon>&#xE80D;</md-icon>
-              <span>Compartir</span>
+              <span>Redes</span>
           </button>
 
           <button md-menu-item (click)="doLogout()">
@@ -29,6 +37,8 @@
               <span>Cerrar cuenta</span>
           </button>
       </md-menu>  
+      <!-- final boton lado derecho -->
+
       </ion-title>
   </ion-navbar>
 </ion-header>
@@ -37,7 +47,9 @@
 
 <div class="row featurette">
         <div class="col-md-6 img">
+              <!--click para abrir la pagina-->
           <img (click)="openEjerciciosPage()" class="featurette-image img-fluid mx-auto" src="http://static.vix.com/es/sites/default/files/styles/large/public/imj/entrepadres/F/Fomentar-el-ejercicio-fisico-en-ninos-3.jpg?itok=GYhpNzmN">
+          <!-- ponerle titilos a las imagenes -->
           <div class="card-title">Ejercicios</div> 
           <div class="card-subtitle">41 Listings</div>
          </div>

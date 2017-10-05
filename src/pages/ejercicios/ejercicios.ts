@@ -4,6 +4,7 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
 import { TabsPage } from '../tabs/tabs';
+
 /**
  * Generated class for the EjerciciosPage page.
  *
@@ -19,8 +20,12 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'ejercicios.html',
 })
 export class EjerciciosPage {
+  pet: string = "puppies";
+  isAndroid: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public platform: Platform,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform: Platform,
+    public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,) {
   }
 
   ionViewDidLoad() {

@@ -4,9 +4,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MaterialModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import { HttpModule, Http } from '@angular/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //animaciones de angular
+import { HttpModule } from '@angular/http'
 
+//importar las paginas aqui 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RecomendacionesPage } from '../pages/recomendaciones/recomendaciones';
@@ -20,7 +21,6 @@ import { SedesPage } from '../pages/sedes/sedes';
 import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { ConfiguracionPage } from '../pages/configuracion/configuracion';
-import { AboutPage } from '../pages/about/about';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { LogearPage } from '../pages/logear/logear';
@@ -30,8 +30,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Facebook } from '@ionic-native/facebook';
 import { FacebookWeb } from '../libs/facebook/facebook';
 
-import { ApiService } from '../service/api/api';
-import { DialogAlert } from '../dialogs/alert/alert';
+import { ApiService } from '../service/api/api'; //importar el api 
+import { DialogAlert } from '../dialogs/alert/alert';//importar mensaje de alerta 
 import { Utils } from '../libs/utils/utils';
 
 import 'hammerjs';
@@ -39,6 +39,7 @@ import 'hammerjs';
 
 @NgModule({
   declarations: [
+    //    se importan todas las paginas aqui 
     MyApp,
     HomePage,
     RecomendacionesPage,
@@ -52,7 +53,6 @@ import 'hammerjs';
     SuplementosPage,
     TiendaPage,
     ConfiguracionPage,
-    AboutPage,
     TabsPage,
     LoginPage,
     LogearPage,
@@ -67,6 +67,7 @@ import 'hammerjs';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    //    aqui tambien se importan las paginas     
     MyApp,
     HomePage,
     RecomendacionesPage,
@@ -81,12 +82,12 @@ import 'hammerjs';
     TiendaPage,
     ConfiguracionPage,
     TabsPage,
-    AboutPage,
     LoginPage,
     LogearPage,
     DialogAlert
   ],
   providers: [
+    // las funciones como alertas 
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},  

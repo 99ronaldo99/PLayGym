@@ -1,15 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform } from 'ionic-angular'; //importar iconos de angular 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 // estos import son para las paginas de la applicacion 
-// importar + nombre pagina + de + direcccion del archivo
+// import + nombre pagina + from + direcccion del archivo
 
 import { AyudaPage } from '../pages/ayuda/ayuda';
-import { RegistrarPage } from '../pages/registrar/registrar';
 import { SedesPage } from '../pages/sedes/sedes';
-import { SuplementosPage } from '../pages/suplementos/suplementos';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -22,27 +20,24 @@ import { LogearPage } from '../pages/logear/logear';
 export class MyApp {
   @ViewChild(Nav) nav: Nav; 
 
-  // rootPage: any= LoginPage 
-  rootPage: any= this.isLogged() ? TabsPage : LoginPage  
+  rootPage: any= this.isLogged() ? TabsPage : LoginPage  //no mostrar pagina principal hasta estar logado
 
-  /*rootPage: any= TabsPage */
 
-  pages: Array<{title: string, component: any, icon: string}>;//se cambio icon: string
+  pages: Array<{title: string, component: any, icon: string}>;//para mostrar los iconos en el menu
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
+    // agregar botones al menu 
     this.pages = [
-      { title: 'Sedes', component: SedesPage , icon: "pin" },
-      { title: 'Tienda', component: TiendaPage , icon: "cart" },
-      { title: 'Suplementos', component: SuplementosPage , icon: "flag" },
+      { title: 'Sedes'/*nombre del boton*/ , component: SedesPage /*pagina a abrir*/, icon: "pin"/*icono boton*/ },
+      { title: 'Tienda', component: TiendaPage , icon: "cart"},
       { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
-      { title: 'Registrar', component: RegistrarPage, icon: "help-circle"  },
       { title: 'Logear', component: LogearPage, icon: "help-circle"  },
-
     ];
   }
+  
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -50,17 +45,13 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-
-    
-
   }
-
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
-
+    //si esta logado almacenara los datos en la localstorage
   isLogged(){
     let hasUser = window.localStorage.getItem('user')
     if( hasUser 
