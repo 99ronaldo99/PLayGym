@@ -11,7 +11,7 @@ import { SedesPage } from '../pages/sedes/sedes';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
-import { LogearPage } from '../pages/logear/logear';
+
 
 
 @Component({
@@ -34,7 +34,6 @@ export class MyApp {
       { title: 'Sedes'/*nombre del boton*/ , component: SedesPage /*pagina a abrir*/, icon: "pin"/*icono boton*/ },
       { title: 'Tienda', component: TiendaPage , icon: "cart"},
       { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
-      { title: 'Logear', component: LogearPage, icon: "help-circle"  },
     ];
   }
   

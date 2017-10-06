@@ -21,8 +21,10 @@ declare let cordova:any;
 
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public platform: Platform
-    ,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
+  constructor(
+    public navCtrl: NavController, 
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
     public alerCtrl: AlertController) 
   {
   
@@ -124,7 +126,8 @@ openMenu() {
     this.navCtrl.setRoot(RecomendacionesPage)
   }
   // funcion del boton contactos aqui se escribe su mensaje
-   doAlert() {
+  
+  doAlert() {
      let alert = this.alerCtrl.create({
        title: 'Contactos',
        message: 'Facebook : play gimnasio \n Whatsapp: +553206688840 \n YouTube: https://www.youtube.com/ '   ,

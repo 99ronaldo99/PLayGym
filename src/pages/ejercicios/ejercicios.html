@@ -1,5 +1,5 @@
 <ion-header >
-  	<ion-navbar>
+  <ion-navbar>
   		
   			<!-- boton menu  -->
           <button ion-button menuToggle icon-only>
@@ -8,142 +8,130 @@
           <!-- fin boton -->
 
           <!-- titulo principal  -->
-          <ion-title  class="titulo"  > Ejercicios
+          <ion-title  class="titulo"  >  Ejercicios
           <!-- fin titulo -->
 
           <!-- boton cabeza lado derecho -->
-      <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
-        
-         <ion-icon name="more"></ion-icon>
-        </button>
-      <md-menu #menu="mdMenu"  >
+          <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
+            <ion-icon name="more"></ion-icon>
+          </button>
+
+          <md-menu #menu="mdMenu"  >
                 
-          <button md-menu-item (click)="openSettings()" >
-              <md-icon>&#xE8B9;</md-icon>
-              <span>Configuraciones</span>
-          </button>
+              <button md-menu-item (click)="openSettings()" >
+                  <md-icon>&#xE8B9;</md-icon>
+                  <span>Configuraciones</span>
+              </button>
 
-          <button md-menu-item (click)="doAlert()" >
-              <md-icon>contacts</md-icon>
-              <span>Contactos</span>
-          </button>
+              <button md-menu-item (click)="doAlert()" >
+                  <md-icon>contacts</md-icon>
+                  <span>Contactos</span>
+              </button>
 
-          <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
-              <md-icon>&#xE80D;</md-icon>
-              <span>Redes</span>
-          </button>
+              <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
+                  <md-icon>&#xE80D;</md-icon>
+                  <span>Redes</span>
+              </button>
 
-          <button md-menu-item (click)="doLogout()">
-              <md-icon>&#xE8AC;</md-icon>
-              <span>Cerrar cuenta</span>
-          </button>
-      </md-menu>  
+              <button md-menu-item (click)="doLogout()">
+                  <md-icon>&#xE8AC;</md-icon>
+                  <span>Cerrar cuenta</span>
+              </button>
+          </md-menu>  
+
+          </ion-title>
       <!-- final boton lado derecho --> 
-      </ion-title> 
-	</ion-navbar>
-  <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="pet">
-      <ion-segment-button value="puppies">
-        Puppies
-      </ion-segment-button>
-      <ion-segment-button value="kittens">
-        Kittens
-      </ion-segment-button>
-      <ion-segment-button value="ducklings">
-        Ducklings
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+
+	</ion-navbar>  
 </ion-header>
 
 <ion-content>
 
-<ion-content>
-  <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'puppies'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-2.jpg">
-        </ion-thumbnail>
-        <h2>Oscar</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-4.jpg">
-        </ion-thumbnail>
-        <h2>Zoey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-3.jpg">
-        </ion-thumbnail>
-        <h2>Otto</h2>
-      </ion-item>
-    </ion-list>
+  <ion-card-content>
+  Descripcion : 
+</ion-card-content>
 
-    <ion-list *ngSwitchCase="'kittens'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-1.jpg">
-        </ion-thumbnail>
-        <h2>Luna</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-3.jpg">
-        </ion-thumbnail>
-        <h2>Milo</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-4.jpg">
-        </ion-thumbnail>
-        <h2>Bandit</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-2.jpg">
-        </ion-thumbnail>
-        <h2>Nala</h2>
-      </ion-item>
-    </ion-list>
+<md-tab-group>
+  <md-tab label="Pectorales">
+    <ion-list>
+    <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
 
-    <ion-list *ngSwitchCase="'ducklings'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-1.jpg">
-        </ion-thumbnail>
-        <h2>Daffy</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-2.jpg">
-        </ion-thumbnail>
-        <h2>Huey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-3.jpg">
-        </ion-thumbnail>
-        <h2>Dewey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-4.jpg">
-        </ion-thumbnail>
-        <h2>Louie</h2>
-      </ion-item>
-    </ion-list>
-  </div>
-</ion-content>
+    <a ion-item (click)="openModal({charNum: 0})">
+      Press banco plano
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 1})">
+      press banco , manos juntas
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 2})">
+      Press banco inclinado
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 3})">
+      press banco declinado  
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 4})">
+      ress de barra en maquina 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 5})">
+      Flexiones de brazos
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 6})">
+      Fondos en paralelas 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 7})">
+      Press con mancuernas 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 8})">
+      Apertura con mancuernas 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 9})">
+      Press inclinado, mancuernas 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 10})">
+      Apertura inclinado, mancuernas
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 11})">
+      Apertura de contractor
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 12})">
+      Cruce de poleas 
+    </a>
+
+    <a ion-item (click)="openModal({charNum: 13})">
+      Pull over con maquina 
+    </a>
+
+  </ion-list>
+  </md-tab>
+
+
+  <md-tab label="Espalda">Espalda</md-tab>
+  <md-tab label="Biceps">Biceps</md-tab>
+  <md-tab label="Triceps">Triceps</md-tab>
+  <md-tab label="Hombro">Hombro</md-tab>
+  <md-tab label="Pierna">Pierna</md-tab>
+  <md-tab label="Abdomen">Abdomen</md-tab>
+  <md-tab label="Antebrazo">Antebrazo</md-tab>
+</md-tab-group>
+
+
 
 </ion-content>
+
+
 
 <!-- <ion-footer > 
   <ion-navbar >

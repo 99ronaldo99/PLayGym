@@ -14,14 +14,15 @@
               <md-icon>&#xE8B9;</md-icon>
               <span>Configuraciones</span>
           </button>
-                  
-          <!-- <button md-menu-item>
-              <md-slide-toggle>Notificaciones</md-slide-toggle>
-          </button> -->
+          
+          <button md-menu-item (click)="doAlert()" >
+              <md-icon>contacts</md-icon>
+              <span>Contactos</span>
+          </button>
 
           <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
               <md-icon>&#xE80D;</md-icon>
-              <span>Compartir</span>
+              <span>Redes</span>
           </button>
 
           <button md-menu-item>

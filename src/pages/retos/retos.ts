@@ -4,6 +4,9 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
 import { TabsPage } from '../tabs/tabs';
+import { AlertController } from 'ionic-angular'; //alerta del boton contactos
+
+declare let cordova:any;
 /**
  * Generated class for the RetosPage page.
  *
@@ -20,7 +23,13 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class RetosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public platform: Platform,public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public platform: Platform,
+    public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
+    public alerCtrl: AlertController) {
+
   }
 
   ionViewDidLoad() {
@@ -77,5 +86,15 @@ export class RetosPage {
   }
   openTabs(){
     this.navCtrl.setRoot(TabsPage)
+  }
+  doAlert() {
+     let alert = this.alerCtrl.create({
+       title: 'Contactos',
+       message: 'Facebook : play gimnasio \n Whatsapp: +553206688840 \n YouTube: https://www.youtube.com/ '   ,
+       buttons: ['Ok']
+
+     });
+
+    alert.present()
   }
 }

@@ -24,6 +24,7 @@ import { ConfiguracionPage } from '../pages/configuracion/configuracion';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { LogearPage } from '../pages/logear/logear';
+import { PectoralesPage } from '../pages/pectorales/pectorales';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -56,7 +57,8 @@ import 'hammerjs';
     TabsPage,
     LoginPage,
     LogearPage,
-    DialogAlert
+    DialogAlert,
+    PectoralesPage,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ import 'hammerjs';
     TabsPage,
     LoginPage,
     LogearPage,
-    DialogAlert
+    DialogAlert,
+    PectoralesPage,
   ],
   providers: [
     // las funciones como alertas 
