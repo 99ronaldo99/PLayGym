@@ -2,34 +2,58 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
+import { ModalController} from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
-import { TabsPage } from '../tabs/tabs';
-import { AlertController,ViewController  } from 'ionic-angular';
+
 
 declare let cordova:any;
+/**
+ * Generated class for the EjerciciosPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
 
 @IonicPage({
   name: 'ayuda'
   })
-
 @Component({
   selector: 'page-ayuda',
-  templateUrl: 'ayuda.html',
+  templateUrl: 'ayda.html',
+  
 })
 export class AyudaPage {
+  pet: string = "puppies";
+  isAndroid: boolean = false;
 
-  constructor(public navCtrl: NavController, 
+
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
     public alerCtrl: AlertController,
-    public viewCtrl: ViewController) {
+    public modalCtrl: ModalController,
+    public modaCtrl: ModalController,
+    public biceCtrl: ModalController,) {
+  }
+  /*openModal(characterNum) {
+
+    let modal = this.modalCtrl.create(AyudaPage, characterNum);
+    modal.present();
   }
 
+  openModa(characterNum) {
+
+    let moda = this.modaCtrl.create(AyudaPage, characterNum);
+    moda.present();
+  }*/
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad AyudaPage');
   }
-openMenu() {
+  openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Nuestras Redes',
       cssClass: 'action-sheets-basic-page',
@@ -98,13 +122,11 @@ openMenu() {
     });
     actionSheet.present();
   }
-  
+
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
-  openTabs(){
-    this.navCtrl.setRoot(TabsPage)
-  }
+ 
   doAlert() {
      let alert = this.alerCtrl.create({
        title: 'Contactos',
@@ -114,8 +136,5 @@ openMenu() {
      });
 
     alert.present()
-  }
-  dismiss() {
-    this.viewCtrl.dismiss();
   }
 }

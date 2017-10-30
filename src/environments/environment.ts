@@ -1,7 +1,7 @@
 export const environment = {
  production: false,
  apiClientId: '2',
- apiClientSecret: 'lrKcFfhNzSlwa6gEKor7M1IojUzaFQFe4wsV8r1w',
- apiUrl: 'http://b520d939.ngrok.io /', 
+ apiClientSecret: 'YDsWaF1MK27iiWr5sYoTDToDYXblh65D73CVVNIr',
+ apiUrl: 'http://681d0a54.ngrok.io/', 
  facebook_id: '18050528877778'
 };

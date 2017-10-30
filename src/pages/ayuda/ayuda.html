@@ -1,7 +1,7 @@
 <ion-header >
-  	<ion-navbar>
+    <ion-navbar>
 
-  		<button ion-button menuToggle icon-only>
+      <button ion-button menuToggle icon-only>
           <ion-icon name='menu'></ion-icon>
         </button>
         <ion-title  class="titulo"  > Ayuda
@@ -32,7 +32,7 @@
           </button>
       </md-menu>  
       </ion-title> 
-	</ion-navbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
@@ -40,18 +40,49 @@
 </ion-content>
 
 <ion-footer > 
-	<ion-navbar >
-	<button class="centrado" ion-button icon-center  (click)="openTabs()" >
+  <ion-navbar >
+  <button class="centrado" ion-button icon-left (click)="openTabs()" >
   <ion-icon name="home"></ion-icon>
 </button>
-
-  <ion-buttons start>
-      <button ion-button (click)="dismiss()">
-        <span ion-text color="primary" showWhen="ios">Cancel</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
-    </ion-buttons>
- 		
     
-	</ion-navbar>
+  </ion-navbar>
 </ion-footer>
+
+<!-- <ion-header >
+    <ion-navbar>
+      <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title  class="titulo"  > Configuracion
+      <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
+        
+         <ion-icon name="more"></ion-icon>
+        </button>
+      <md-menu #menu="mdMenu"  >
+                
+          <button md-menu-item (click)="openSettings()" >
+              <md-icon>&#xE8B9;</md-icon>
+              <span>Configuraciones</span>
+          </button>
+
+          <button md-menu-item (click)="doAlert()" >
+              <md-icon>contacts</md-icon>
+              <span>Contactos</span>
+          </button>
+
+          <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
+              <md-icon>&#xE80D;</md-icon>
+              <span>Redes</span>
+          </button>
+
+          <button md-menu-item>
+              <md-icon>&#xE8AC;</md-icon>
+              <span>Cerrar cuenta</span>
+          </button>
+      </md-menu>  
+      </ion-title> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content> -->
+

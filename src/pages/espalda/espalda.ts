@@ -4,10 +4,10 @@ import { Platform,ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-pectorales',
-  templateUrl: 'pectorales.html',
+  selector: 'page-espalda',
+  templateUrl: 'espalda.html',
 })
-export class PectoralesPage {
+export class EspaldaPage {
 	character;
 
   constructor(
@@ -17,7 +17,7 @@ export class PectoralesPage {
 
   	var characters = [
       {
-        name: 'Press banco plano',
+        name: 'Dominadas en barra fija',
         quote: 'para aun optimo resultado sigue \n las instrucciones!',
         image: '',
         items: [
@@ -27,7 +27,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco , manos juntas',
+        name: 'Dominadas agarre supinacion',
         quote: 'Go back, Sam! I\'m going to Mordor alone!',
         image: '',
         items: [
@@ -37,7 +37,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press banco inclinado ',
+        name: 'Polea al pecho',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -47,7 +47,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco declinado ',
+        name: 'Polea trasnuca',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -57,7 +57,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press de barra en maquina',
+        name: 'Polea pecho, agarre estrecho',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -67,7 +67,16 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Flexiones de brazos',
+        name: 'Pull over polea alta',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {        name: 'Remo en polea',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -77,7 +86,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Fondos en paralelas',
+        name: 'Remo horizontal, mancuerna',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -87,7 +96,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press con mancuernas ',
+        name: 'Remo invertido',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -97,17 +106,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura con mancuernas',
-        quote: 'What we need is a few good taters.',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Press inclinado, mancuernas',
+        name: 'Hiperextenciones',
         quote: 'What we need is a few good taters',
         image: '',
         items: [
@@ -117,37 +116,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura inclinado, mancuernas',
-        quote: 'What we need is a few good taters.',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Apertura de contractor',
-        quote: 'What we need is a few good taters.',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Cruce de poleas',
-        quote: 'What we need is a few good taters.',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Pull over con maquina',
+        name: 'Remo horizontal con barra',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -169,6 +138,3 @@ export class PectoralesPage {
   }
 
 }
-
-
-

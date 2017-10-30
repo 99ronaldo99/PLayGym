@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
-import { ConfiguracionPage } from '../configuracion/configuracion';
-import { TabsPage } from '../tabs/tabs';
 import { AlertController } from 'ionic-angular';
 import { PectoralesPage } from '../pectorales/pectorales';
+import { ModalController} from 'ionic-angular';
+import { EspaldaPage } from '../espalda/espalda';
+import { ConfiguracionPage } from '../configuracion/configuracion';
 
-import { ModalController,ViewController} from 'ionic-angular';
 
 declare let cordova:any;
 /**
@@ -36,7 +36,9 @@ export class EjerciciosPage {
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
     public alerCtrl: AlertController,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+    public modaCtrl: ModalController,
+    public biceCtrl: ModalController,) {
   }
   openModal(characterNum) {
 
@@ -44,6 +46,12 @@ export class EjerciciosPage {
     modal.present();
   }
 
+  openModa(characterNum) {
+
+    let moda = this.modaCtrl.create(EspaldaPage, characterNum);
+    moda.present();
+  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad EjerciciosPage');
   }
@@ -115,6 +123,10 @@ export class EjerciciosPage {
       ]
     });
     actionSheet.present();
+  }
+
+  openSettings(){
+    this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
  
   doAlert() {
