@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { QwertPage } from './qwert';
+import { AntebrazoPage } from './antebrazo';
 
 @NgModule({
   declarations: [
-    QwertPage,
+    AntebrazoPage,
   ],
   imports: [
-    IonicPageModule.forChild(QwertPage),
+    IonicPageModule.forChild(AntebrazoPage),
   ],
 })
-export class QwertPageModule {}
+export class AntebrazoPageModule {}

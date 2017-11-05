@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //animaciones de angular
 import { HttpModule } from '@angular/http'
-
 //importar las paginas aqui 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -26,7 +25,12 @@ import { LoginPage } from '../pages/login/login';
 import { LogearPage } from '../pages/logear/logear';
 import { PectoralesPage } from '../pages/pectorales/pectorales';
 import { EspaldaPage } from '../pages/espalda/espalda';
-
+import { BicepsPage } from '../pages/biceps/biceps';
+import { TricepsPage } from '../pages/triceps/triceps';
+import { HombroPage } from '../pages/hombro/hombro';
+import { PiernaPage } from '../pages/pierna/pierna';
+import { AbdomenPage } from '../pages/abdomen/abdomen';
+import { AntebrazoPage } from '../pages/antebrazo/antebrazo';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -38,7 +42,6 @@ import { DialogAlert } from '../dialogs/alert/alert';//importar mensaje de alert
 import { Utils } from '../libs/utils/utils';
 
 import 'hammerjs';
-
 
 @NgModule({
   declarations: [
@@ -62,8 +65,12 @@ import 'hammerjs';
     DialogAlert,
     PectoralesPage,
     EspaldaPage,
-    
-    
+    BicepsPage,
+    TricepsPage,
+    HombroPage,
+    PiernaPage,
+    AbdomenPage,
+    AntebrazoPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +81,7 @@ import 'hammerjs';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    //    aqui tambien se importan las paginas     
+    //    aqui tambien se importan las paginas
     MyApp,
     HomePage,
     RecomendacionesPage,
@@ -94,6 +101,12 @@ import 'hammerjs';
     DialogAlert,
     PectoralesPage,
     EspaldaPage,
+    BicepsPage,
+    TricepsPage,
+    HombroPage,
+    PiernaPage,
+    AbdomenPage,
+    AntebrazoPage
   ],
   providers: [
     // las funciones como alertas 

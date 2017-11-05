@@ -7,6 +7,12 @@ import { PectoralesPage } from '../pectorales/pectorales';
 import { ModalController} from 'ionic-angular';
 import { EspaldaPage } from '../espalda/espalda';
 import { ConfiguracionPage } from '../configuracion/configuracion';
+import { BicepsPage } from '../biceps/biceps';
+import { TricepsPage } from '../triceps/triceps';
+import { HombroPage } from '../hombro/hombro';
+import { PiernaPage } from '../pierna/pierna';
+import { AbdomenPage } from '../abdomen/abdomen';
+import { AntebrazoPage } from '../antebrazo/antebrazo';
 
 
 declare let cordova:any;
@@ -38,7 +44,14 @@ export class EjerciciosPage {
     public alerCtrl: AlertController,
     public modalCtrl: ModalController,
     public modaCtrl: ModalController,
-    public biceCtrl: ModalController,) {
+    public bicepsCtrl: ModalController,
+    public triceCtrl: ModalController,
+    public HombroCtrl: ModalController,
+    public PiernaCtrl: ModalController,
+    public AbdomenCtrl: ModalController,
+    public AntebrazoCtrl: ModalController,
+
+    ) {
   }
   openModal(characterNum) {
 
@@ -51,7 +64,41 @@ export class EjerciciosPage {
     let moda = this.modaCtrl.create(EspaldaPage, characterNum);
     moda.present();
   }
-  
+
+  openbiceps(characterNum) {
+
+    let biceps = this.bicepsCtrl.create(BicepsPage, characterNum);
+    biceps.present();
+  }
+
+  opentrice(characterNum) {
+
+    let trice = this.triceCtrl.create(TricepsPage, characterNum);
+    trice.present();
+
+  }
+
+  openHombro(characterNum){
+    let Hombro = this.HombroCtrl.create(HombroPage,characterNum);
+    Hombro.present();
+  }
+
+
+  openPierna(characterNum){
+    let Pierna = this.PiernaCtrl.create(PiernaPage,characterNum);
+    Pierna.present();
+  }
+
+  openAbdomen(characterNum){
+    let Abdomen = this.AbdomenCtrl.create(AbdomenPage,characterNum);
+    Abdomen.present();
+  }
+
+  openAntebrazo(characterNum){
+    let Antebrazo = this.AntebrazoCtrl.create(AntebrazoPage,characterNum);
+    Antebrazo.present();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EjerciciosPage');
   }

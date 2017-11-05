@@ -214,26 +214,322 @@
     </a>
 
   </md-tab>
-  <md-tab label="Triceps">Triceps</md-tab>
-  <md-tab label="Hombro">Hombro</md-tab>
-  <md-tab label="Pierna">Pierna</md-tab>
-  <md-tab label="Abdomen">Abdomen</md-tab>
-  <md-tab label="Antebrazo">Antebrazo</md-tab>
+
+  <md-tab label="Triceps">
+      <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
+
+    <a ion-item (click)="opentrice({charNum: 0})">
+      Extencion de triceps en polea
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 1})">
+      Triceps polea, agarre invertido
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 2})">
+      Press frances en banco plano
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 3})">
+      Press frances, mancuernas
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 4})">
+      Extension alterada, mancuernas
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 5})">
+      Extensiones sentado,marcuerna
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 6})">
+      Extensiones sentado con barra
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 7})">
+      extension mancuerna, inclinado
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 8})">
+      Diping entre dos bancos
+    </a>
+
+    <a ion-item (click)="opentrice({charNum: 9})">
+      Triceps polea, una mano
+    </a>
+    
+
+  </md-tab>
+  
+  <md-tab label="Hombro">
+      <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
+
+    <a ion-item (click)="openHombro({charNum: 0})">
+      Frontal con barra
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 1})">
+      Trasnuca con barra
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 2})">
+      sentado con mancuernas
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 3})">
+      Frontal con rotacion de munecas
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 4})">
+      Elevaciones laterales
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 5})">
+      Elevaciones laterales,pajaro
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 6})">
+      Elevaciones frontales macuernas
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 7})">
+      Elevaciones acostado de lado
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 8})">
+      elevacion alternada con polea
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 9})">
+    elevaciones frontales con polea
+    </a>
+    
+
+    <a ion-item (click)="openHombro({charNum: 10})">
+    Elevaciones laterales polea baja
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 11})">
+    elevacion frontal con mancuerna
+    </a>
+
+
+    <a ion-item (click)="openHombro({charNum: 12})">
+      Elevaciones frontal con barra
+    </a>
+
+
+    <a ion-item (click)="openHombro({charNum: 13})">
+      Remo al cuello,manos separadas
+    </a>
+
+
+    <a ion-item (click)="openHombro({charNum: 14})">
+      Encogimiento con barra
+    </a>
+      
+    <a ion-item (click)="openHombro({charNum: 15})">
+      Encogimiento y rotaciones 
+    </a>
+    
+    <a ion-item (click)="openHombro({charNum: 16})">
+      Deltoides posterior en maquina
+    </a>
+
+    <a ion-item (click)="openHombro({charNum: 17})">
+      Frontal en multipower
+    </a>
+
+
+  </md-tab>
+  
+  <md-tab label="Pierna">
+     <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
+
+    <a ion-item (click)="openPierna({charNum: 0})">
+      Semtadillas pierna separadas
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 1})">
+      Setadillas frontales con barra
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 2})">
+      Press pierna
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 3})">
+      Sentadilla hack
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 4})">
+      Extension de pierna en maquina 
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 5})">
+      Curl de pierna acostado
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 6})">
+      Curl de pierna sentado en maquina 
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 7})">
+      Gemelos de pie en maquina
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 8})">
+      Gemelos sentado maquina
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 9})">
+      Peso muerto
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 10})">
+    Flexion de tronco al frente 
+    </a>
+    
+
+    <a ion-item (click)="openPierna({charNum: 11})">
+    Aductores en maquina 
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 12})">
+    Extension de cadera polea baja
+    </a>
+
+
+    <a ion-item (click)="openPierna({charNum: 13})">
+    Extension de cadera en maquina
+    </a>
+
+
+    <a ion-item (click)="openPierna({charNum: 14})">
+      Extansion de cadera en suelo
+    </a>
+
+
+    <a ion-item (click)="openPierna({charNum: 15})">
+    Adcuccion de cadera de pie polea
+    </a>
+      
+    <a ion-item (click)="openPierna({charNum: 16})">
+    abduccion de cedera acostado
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 17})">
+    Abdcutores sentado en maquina 
+    </a>
+
+     <a ion-item (click)="openPierna({charNum: 18})">
+    Peso muerto rumano 
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 19})">
+    tijeras con macuerna
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 20})">
+    femonal con fitball
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 21})">
+      sentadillas bulgadas 
+    </a>
+
+    <a ion-item (click)="openPierna({charNum: 22})">
+    sentadillas con mancuernas
+    </a>
+  </md-tab>
+  
+  <md-tab label="Abdomen">
+     <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
+
+    <a ion-item (click)="openAbdomen({charNum: 0})">
+      Encogimientos
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 1})">
+      Elevacion tronco del suelo
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 2})">
+      Encogimiento con pies en un banco
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 3})">
+      Elevaciones del tronco inclinado
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 4})">
+      encogimiento en polea
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 5})">
+      Elevaciones de pierna
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 6})">
+      Elevaciones de rodillas en paralelas 
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 7})">
+      Elevaciones de piernas suspendido
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 8})">
+      rotacion del tronco con baston
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 9})">
+      Flexion lateral con mancuerna
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 10})">
+    Flecion lateral del tronco en banco
+    </a>
+    
+
+    <a ion-item (click)="openAbdomen({charNum: 11})">
+    Advominales en maquina
+    </a>
+
+    <a ion-item (click)="openAbdomen({charNum: 12})">
+    Flexion lateral en polea alta
+    </a>
+
+
+    <a ion-item (click)="openAbdomen({charNum: 13})">
+    Abdominales con fitball
+    </a>
+  </md-tab>
+  
+  <md-tab label="Antebrazo">
+    <ion-list-header>
+      Elige un Ejercicio 
+    </ion-list-header>
+
+    <a ion-item (click)="openAntebrazo({charNum: 0})">
+      Curl de brazos barra, agarra pronacion
+    </a>
+
+    <a ion-item (click)="openAntebrazo({charNum: 1})">
+      Curl de brazos barra,agarre supinacion
+    </a>
+    
+  </md-tab>
 </md-tab-group>
 
 
 
 </ion-content>
 
-
-
-<!-- <ion-footer > 
-  <ion-navbar >
-  
-  <button class="centrado" ion-button icon-center (click)="openTabs()" >
-  <ion-icon name="home"></ion-icon>
-</button>
-
-     
-  </ion-navbar>
-</ion-footer> -->

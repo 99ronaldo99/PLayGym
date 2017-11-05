@@ -1,13 +1,13 @@
+import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { Platform,ViewController } from 'ionic-angular';
-import { Component } from '@angular/core';
 
 @IonicPage()
 @Component({
-  selector: 'page-pectorales',
-  templateUrl: 'pectorales.html',
+  selector: 'page-abdomen',
+  templateUrl: 'abdomen.html',
 })
-export class PectoralesPage {
+export class AbdomenPage {
 	character;
 
   constructor(
@@ -17,7 +17,7 @@ export class PectoralesPage {
 
   	var characters = [
       {
-        name: 'Press banco plano',
+        name: 'Encogimientos',
         quote: 'para aun optimo resultado sigue \n las instrucciones!',
         image: '',
         items: [
@@ -27,7 +27,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco , manos juntas',
+        name: 'Elevacion tronco del suelo',
         quote: 'Go back, Sam! I\'m going to Mordor alone!',
         image: '',
         items: [
@@ -37,7 +37,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press banco inclinado ',
+        name: 'Encogimiento con pies en un banco',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -47,7 +47,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco declinado ',
+        name: 'Elevaciones del tronco inclinado',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -57,7 +57,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press de barra en maquina',
+        name: 'encogimiento en polea',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -67,7 +67,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Flexiones de brazos',
+        name: 'Elevaciones de pierna',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -77,7 +77,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Fondos en paralelas',
+        name: 'Elevaciones de rodillas en paralelas ',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -87,7 +87,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press con mancuernas ',
+        name: 'Elevaciones de piernas suspendido',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -97,7 +97,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura con mancuernas',
+        name: 'rotacion del tronco con baston',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -107,17 +107,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press inclinado, mancuernas',
-        quote: 'What we need is a few good taters',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Apertura inclinado, mancuernas',
+        name: 'Flexion lateral con mancuerna',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -127,7 +117,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura de contractor',
+        name: 'Flecion lateral del tronco en banco',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -137,7 +127,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Cruce de poleas',
+        name: 'Advominales en maquina',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -147,7 +137,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Pull over con maquina',
+        name: 'Flexion lateral en polea alta',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -155,7 +145,18 @@ export class PectoralesPage {
           { title: 'Culture', note: 'Shire Folk' },
           { title: 'Nickname', note: 'Sam' }
         ]
-      }
+      },
+      {
+        name: 'Abdominales con fitball',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+
     ];
     this.character = characters[this.params.get('charNum')];
   }
@@ -165,10 +166,8 @@ export class PectoralesPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PectoralesPage');
+    console.log('ionViewDidLoad AbdomenPage');
   }
 
 }
-
-
 

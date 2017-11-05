@@ -1,13 +1,13 @@
+import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 import { Platform,ViewController } from 'ionic-angular';
-import { Component } from '@angular/core';
 
 @IonicPage()
 @Component({
-  selector: 'page-pectorales',
-  templateUrl: 'pectorales.html',
+  selector: 'page-pierna',
+  templateUrl: 'pierna.html',
 })
-export class PectoralesPage {
+export class PiernaPage {
 	character;
 
   constructor(
@@ -17,7 +17,7 @@ export class PectoralesPage {
 
   	var characters = [
       {
-        name: 'Press banco plano',
+        name: 'Semtadillas pierna separadas',
         quote: 'para aun optimo resultado sigue \n las instrucciones!',
         image: '',
         items: [
@@ -27,7 +27,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco , manos juntas',
+        name: 'Setadillas frontales con barra',
         quote: 'Go back, Sam! I\'m going to Mordor alone!',
         image: '',
         items: [
@@ -37,7 +37,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press banco inclinado ',
+        name: 'Press pierna',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -47,7 +47,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'press banco declinado ',
+        name: 'Sentadilla hack',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -57,7 +57,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press de barra en maquina',
+        name: 'Extension de pierna en maquina ',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -67,7 +67,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Flexiones de brazos',
+        name: 'Curl de pierna acostado',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -77,7 +77,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Fondos en paralelas',
+        name: 'Curl de pierna sentado en maquina',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -87,7 +87,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press con mancuernas ',
+        name: 'Gemelos de pie en maquina',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -97,7 +97,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura con mancuernas',
+        name: 'Gemelos sentado maquina',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -107,17 +107,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Press inclinado, mancuernas',
-        quote: 'What we need is a few good taters',
-        image: '',
-        items: [
-          { title: 'Race', note: 'Hobbit' },
-          { title: 'Culture', note: 'Shire Folk' },
-          { title: 'Nickname', note: 'Sam' }
-        ]
-      },
-      {
-        name: 'Apertura inclinado, mancuernas',
+        name: 'Peso muerto',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -127,7 +117,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Apertura de contractor',
+        name: 'Flexion de tronco al frente',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -137,7 +127,7 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Cruce de poleas',
+        name: 'Aductores en maquina ',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -147,7 +137,107 @@ export class PectoralesPage {
         ]
       },
       {
-        name: 'Pull over con maquina',
+        name: 'Extension de cadera polea baja',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'Extension de cadera en maquina',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'Extansion de cadera en suelo',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'Adcuccion de cadera de pie polea',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'abduccion de cedera acostado',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'Abdcutores sentado en maquina ',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'Peso muerto rumano',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'tijeras con macuerna',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'femonal con fitball',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'sentadillas bulgadas ',
+        quote: 'What we need is a few good taters.',
+        image: '',
+        items: [
+          { title: 'Race', note: 'Hobbit' },
+          { title: 'Culture', note: 'Shire Folk' },
+          { title: 'Nickname', note: 'Sam' }
+        ]
+      },
+      {
+        name: 'sentadillas con mancuernas',
         quote: 'What we need is a few good taters.',
         image: '',
         items: [
@@ -156,6 +246,7 @@ export class PectoralesPage {
           { title: 'Nickname', note: 'Sam' }
         ]
       }
+      
     ];
     this.character = characters[this.params.get('charNum')];
   }
@@ -165,10 +256,8 @@ export class PectoralesPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PectoralesPage');
+    console.log('ionViewDidLoad PiernaPage');
   }
 
 }
-
-
 
