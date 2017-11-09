@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //animaciones de angular
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+
 //importar las paginas aqui 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -31,6 +32,8 @@ import { HombroPage } from '../pages/hombro/hombro';
 import { PiernaPage } from '../pages/pierna/pierna';
 import { AbdomenPage } from '../pages/abdomen/abdomen';
 import { AntebrazoPage } from '../pages/antebrazo/antebrazo';
+import { TamizajePage } from '../pages/tamizaje/tamizaje';
+
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -70,7 +73,8 @@ import 'hammerjs';
     HombroPage,
     PiernaPage,
     AbdomenPage,
-    AntebrazoPage
+    AntebrazoPage,
+    TamizajePage
   ],
   imports: [
     BrowserModule,
@@ -106,7 +110,8 @@ import 'hammerjs';
     HombroPage,
     PiernaPage,
     AbdomenPage,
-    AntebrazoPage
+    AntebrazoPage,
+    TamizajePage
   ],
   providers: [
     // las funciones como alertas 

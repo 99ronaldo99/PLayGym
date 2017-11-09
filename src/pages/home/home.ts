@@ -9,7 +9,7 @@ import { EjerciciosPage } from '../ejercicios/ejercicios';
 import { RutinasPage } from '../rutinas/rutinas';
 import { RetosPage } from '../retos/retos';
 import { RecomendacionesPage } from '../recomendaciones/recomendaciones';
-
+import { StatusBar } from '@ionic-native/status-bar';
 
 
 declare let cordova:any;
@@ -25,9 +25,11 @@ export class HomePage {
     public navCtrl: NavController, 
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
-    public alerCtrl: AlertController) 
+    public alerCtrl: AlertController,
+    private statusBar: StatusBar) 
   {
-  
+  this.statusBar.overlaysWebView(true);
+  this.statusBar.backgroundColorByHexString('#209643');
   }
 
 openMenu() {
@@ -114,16 +116,16 @@ openMenu() {
     this.navCtrl.setRoot(HomePage)
   }
   openEjerciciosPage(){
-    this.navCtrl.setRoot(EjerciciosPage)
+    this.navCtrl.push(EjerciciosPage)
   }
   openRutinasPage(){
-    this.navCtrl.setRoot(RutinasPage) 
+    this.navCtrl.push(RutinasPage) 
   }
   openRetosPage(){
-    this.navCtrl.setRoot(RetosPage) 
+    this.navCtrl.push(RetosPage) 
   }
   openRecomendacionesPage(){
-    this.navCtrl.setRoot(RecomendacionesPage)
+    this.navCtrl.push(RecomendacionesPage)
   }
   // funcion del boton contactos aqui se escribe su mensaje
   

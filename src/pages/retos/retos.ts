@@ -6,13 +6,7 @@ import { ConfiguracionPage } from '../configuracion/configuracion';
 import { TabsPage } from '../tabs/tabs';
 import { AlertController } from 'ionic-angular'; //alerta del boton contactos
 
-declare let cordova:any;
-/**
- * Generated class for the RetosPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+/*declare let cordova:any;*/
 
 @IonicPage({
   name: 'retos'

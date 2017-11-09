@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
-import { App, MenuController } from 'ionic-angular';
+import { App, MenuController,ViewController } from 'ionic-angular';
 import { ConfiguracionPage } from '../configuracion/configuracion';
 import { TabsPage } from '../tabs/tabs';
 import { AlertController } from 'ionic-angular'; //alerta del boton contactos
@@ -28,9 +28,8 @@ export class SedesPage {
     public navParams: NavParams,
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
-    public alerCtrl: AlertController) {
-
-
+    public alerCtrl: AlertController,
+    public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -111,6 +110,11 @@ export class SedesPage {
   openTabs(){
     this.navCtrl.setRoot(TabsPage)
   }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+
   doAlert() {
      let alert = this.alerCtrl.create({
        title: 'Contactos',

@@ -5,6 +5,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { FacebookWeb } from '../../libs/facebook/facebook';
 import { LogearPage } from '../logear/logear';
 import { RegistrarPage } from '../registrar/registrar';
+import { StatusBar } from '@ionic-native/status-bar';
  
 
 @IonicPage({
@@ -23,7 +24,12 @@ loadingFacebook = false
   	public navParams: NavParams,  
     public fb: Facebook,
     public fbWeb: FacebookWeb,
-    public platform: Platform) { }
+    public platform: Platform,
+    private statusBar: StatusBar) 
+  { 
+  this.statusBar.overlaysWebView(true);
+  this.statusBar.backgroundColorByHexString('#209643');
+  }
    
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

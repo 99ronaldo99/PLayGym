@@ -1,109 +1,56 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Platform, ActionSheetController,ViewController } from 'ionic-angular';
+import { Platform, ActionSheetController } from 'ionic-angular';
 import { App, MenuController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
-import { PectoralesPage } from '../pectorales/pectorales';
-import { ModalController} from 'ionic-angular';
-import { EspaldaPage } from '../espalda/espalda';
 import { ConfiguracionPage } from '../configuracion/configuracion';
-import { BicepsPage } from '../biceps/biceps';
-import { TricepsPage } from '../triceps/triceps';
-import { HombroPage } from '../hombro/hombro';
-import { PiernaPage } from '../pierna/pierna';
-import { AbdomenPage } from '../abdomen/abdomen';
-import { AntebrazoPage } from '../antebrazo/antebrazo';
+import { TabsPage } from '../tabs/tabs';
+import { AlertController } from 'ionic-angular'; //alerta del boton contactos
+
 
 
 declare let cordova:any;
 /**
- * Generated class for the EjerciciosPage page.
+ * Generated class for the TamizajePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
-@IonicPage({
-  name: 'ejercicios'
-  })
+@IonicPage()
 @Component({
-  selector: 'page-ejercicios',
-  templateUrl: 'ejercicios.html',
-  
+  selector: 'page-tamizaje',
+  templateUrl: 'tamizaje.html',
 })
-export class EjerciciosPage {
-  pet: string = "puppies";
-  isAndroid: boolean = false;
+export class TamizajePage {
+	favoriteSeason: string;
 
+  seasons = [
+    'Ningun Ejercicio',
+    'Ejercicio de baja intensidad',
+    'Ejercicio de intnesidad media',
+    'Ejercicio de intensidad alta',
+  ];
+
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+
+  selected = 'option2';
 
   constructor(
-    public navCtrl: NavController,
+    public navCtrl: NavController, 
     public navParams: NavParams,
     public platform: Platform,
     public actionsheetCtrl: ActionSheetController,app: App, menu: MenuController,
-    public alerCtrl: AlertController,
-    public modalCtrl: ModalController,
-    public modaCtrl: ModalController,
-    public bicepsCtrl: ModalController,
-    public triceCtrl: ModalController,
-    public HombroCtrl: ModalController,
-    public PiernaCtrl: ModalController,
-    public AbdomenCtrl: ModalController,
-    public AntebrazoCtrl: ModalController,
-    public viewCtrl: ViewController
-
-
-    ) {
-  }
-  openModal(characterNum) {
-
-    let modal = this.modalCtrl.create(PectoralesPage, characterNum);
-    modal.present();
-  }
-
-  openModa(characterNum) {
-
-    let moda = this.modaCtrl.create(EspaldaPage, characterNum);
-    moda.present();
-  }
-
-  openbiceps(characterNum) {
-
-    let biceps = this.bicepsCtrl.create(BicepsPage, characterNum);
-    biceps.present();
-  }
-
-  opentrice(characterNum) {
-
-    let trice = this.triceCtrl.create(TricepsPage, characterNum);
-    trice.present();
-
-  }
-
-  openHombro(characterNum){
-    let Hombro = this.HombroCtrl.create(HombroPage,characterNum);
-    Hombro.present();
-  }
-
-
-  openPierna(characterNum){
-    let Pierna = this.PiernaCtrl.create(PiernaPage,characterNum);
-    Pierna.present();
-  }
-
-  openAbdomen(characterNum){
-    let Abdomen = this.AbdomenCtrl.create(AbdomenPage,characterNum);
-    Abdomen.present();
-  }
-
-  openAntebrazo(characterNum){
-    let Antebrazo = this.AntebrazoCtrl.create(AntebrazoPage,characterNum);
-    Antebrazo.present();
+    public alerCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EjerciciosPage');
+    console.log('ionViewDidLoad TamizajePage');
   }
+
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Nuestras Redes',
@@ -173,15 +120,12 @@ export class EjerciciosPage {
     });
     actionSheet.present();
   }
-
   openSettings(){
     this.navCtrl.push(ConfiguracionPage);//push es para que abrir una pantalla encima de otra
   }
-
-  dismiss() {
-    this.viewCtrl.dismiss();
+  openTabs(){
+    this.navCtrl.setRoot(TabsPage)
   }
- 
   doAlert() {
      let alert = this.alerCtrl.create({
        title: 'Contactos',
@@ -192,4 +136,6 @@ export class EjerciciosPage {
 
     alert.present()
   }
+
 }
+

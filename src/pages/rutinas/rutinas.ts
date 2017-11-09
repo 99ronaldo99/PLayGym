@@ -6,6 +6,8 @@ import { ConfiguracionPage } from '../configuracion/configuracion';
 import { TabsPage } from '../tabs/tabs';
 import { AlertController } from 'ionic-angular'; //alerta del boton contactos
 
+
+
 declare let cordova:any;
 /**
  * Generated class for the RutinasPage page.

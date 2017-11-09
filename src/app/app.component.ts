@@ -11,6 +11,7 @@ import { SedesPage } from '../pages/sedes/sedes';
 import { TiendaPage } from '../pages/tienda/tienda';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
+import { TamizajePage } from '../pages/tamizaje/tamizaje';
 
 
 
@@ -25,7 +26,12 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;//para mostrar los iconos en el menu
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    ) 
+  {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -34,7 +40,12 @@ export class MyApp {
       { title: 'Sedes'/*nombre del boton*/ , component: SedesPage /*pagina a abrir*/, icon: "pin"/*icono boton*/ },
       { title: 'Tienda', component: TiendaPage , icon: "cart"},
       { title: 'Ayuda', component: AyudaPage, icon: "help-circle"  },
+      { title: 'Tamizaje', component: TamizajePage, icon: "body"  },
     ];
+
+    this.statusBar.overlaysWebView(true);
+    this.statusBar.backgroundColorByHexString('#209643');
+
   }
   
   initializeApp() {
@@ -48,7 +59,7 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
     //si esta logado almacenara los datos en la localstorage
   isLogged(){

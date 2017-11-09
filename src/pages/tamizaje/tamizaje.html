@@ -1,0 +1,116 @@
+<ion-header >
+    <ion-navbar color="secondary" >
+      <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title  class="titulo"  > Tamizaje
+      <button  md-icon-button style="float: right;" [mdMenuTriggerFor]="menu" >
+        
+         <ion-icon name="more"></ion-icon>
+        </button>
+      <md-menu #menu="mdMenu"  >
+                
+          <button md-menu-item (click)="openSettings()" >
+              <md-icon>&#xE8B9;</md-icon>
+              <span>Configuraciones</span>
+          </button>
+          
+          <button md-menu-item (click)="doAlert()" >
+              <md-icon>contacts</md-icon>
+              <span>Contactos</span>
+          </button>
+
+          <button md-menu-item class="action-sheets-basic-page redes" (click)="openMenu()" >
+              <md-icon>&#xE80D;</md-icon>
+              <span>Redes</span>
+          </button>
+
+          <button md-menu-item>
+              <md-icon>&#xE8AC;</md-icon>
+              <span>Cerrar cuenta</span>
+          </button>
+      </md-menu>  
+      </ion-title> 
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content>
+
+  <ion-card>
+  <ion-card-content>
+    Por favor Digita tus datos correctamente,con ello analizaremos cuales son tus necesidades, ayudandote a solucionarlas.  
+  </ion-card-content>
+</ion-card>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Digite su estatura (Cm)</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Digite su peso (Kg)</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+     
+
+     <ion-item>
+      <ion-label floating>Edad</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+
+     <ion-item>
+      <ion-label stacked>Nivel de actividad fisica</ion-label>
+    </ion-item>
+
+    <ion-item>
+    <md-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+      <md-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+        {{season}}
+      </md-radio-button>
+    </md-radio-group>
+    <div class="example-selected-value"> Nivel Seleccionado: {{favoriteSeason}}</div>
+    </ion-item>
+  
+
+
+    <ion-item>
+      <ion-label stacked>Genero</ion-label>
+      <!-- <ion-input type="text"></ion-input> --> 
+    </ion-item>
+
+    <!-- <ion-item> -->
+     <section class="example-section">
+      <label class="example-margin"></label>
+      <!-- <label class="example-margin">Genero : </label> -->
+      <md-radio-group [(ngModel)]="align">
+        <md-radio-button class="example-margin" value="start">Masculino</md-radio-button>
+        <md-radio-button class="example-margin" value="end">Femenino</md-radio-button>
+      </md-radio-group>
+    </section>
+   <!--  </ion-item> -->
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block>Guardar datos</button>
+  </div>
+
+</ion-content>
+
+<ion-footer > 
+  <ion-navbar >
+  <!-- <button class="centrado" ion-button icon-left (click)="openTabs()" >
+  <ion-icon name="home"></ion-icon>
+</button>
+     -->
+  </ion-navbar>
+</ion-footer>
