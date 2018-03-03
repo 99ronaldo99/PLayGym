@@ -112,7 +112,7 @@ export class RecomendacionesPage {
   doAlert() {
      let alert = this.alerCtrl.create({
        title: 'Contactos',
-       message: 'Facebook : play gimnasio \n Whatsapp: +553206688840 \n YouTube: https://www.youtube.com/ '   ,
+       message: 'Facebook : play gimnasio \n Whatsapp: +553206688840 \n YouTube: https://www.youtube.com/ ',
        buttons: ['Ok']
 
      });

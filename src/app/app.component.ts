@@ -9,9 +9,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AyudaPage } from '../pages/ayuda/ayuda';
 import { SedesPage } from '../pages/sedes/sedes';
 import { TiendaPage } from '../pages/tienda/tienda';
-import { LoginPage } from '../pages/login/login';
-import { TabsPage } from '../pages/tabs/tabs';
+/*import { LoginPage } from '../pages/login/login';*/
+/*import { TabsPage } from '../pages/tabs/tabs';*/
 import { TamizajePage } from '../pages/tamizaje/tamizaje';
+import { HomePage } from '../pages/home/home';
 
 
 
@@ -20,8 +21,8 @@ import { TamizajePage } from '../pages/tamizaje/tamizaje';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav; 
-
-  rootPage: any= this.isLogged() ? TabsPage : LoginPage  //no mostrar pagina principal hasta estar logado
+  rootPage: any= HomePage 
+  /*rootPage: any= this.isLogged() ? TabsPage : LoginPage*/  //no mostrar pagina principal hasta estar logado
 
 
   pages: Array<{title: string, component: any, icon: string}>;//para mostrar los iconos en el menu
